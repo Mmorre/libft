@@ -23,10 +23,3 @@ void    ft_putnbr(int nbr)
 	else
 	ft_putchar(n + '0');
 }
-
-int main()
-{
-	int i = -12345678;
-	ft_putnbr(i);
-	return 0;
-}
