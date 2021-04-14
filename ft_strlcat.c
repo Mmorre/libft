@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:47:39 by mmorre            #+#    #+#             */
-/*   Updated: 2021/01/12 14:57:38 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 10:18:00 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	
+	size_t	i;
 }

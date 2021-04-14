@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 09:43:29 by math              #+#    #+#             */
-/*   Updated: 2021/01/08 09:55:41 by math             ###   ########.fr       */
+/*   Updated: 2021/04/14 10:23:47 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if ((char)c == '\0')
-		return ((char*)s);
+		return ((char *)s);
 	return (occurrence);
 }

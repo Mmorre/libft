@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 11:21:18 by math              #+#    #+#             */
-/*   Updated: 2021/01/05 11:34:12 by math             ###   ########.fr       */
+/*   Updated: 2021/04/14 10:15:22 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *tmp1;
-	unsigned char *tmp2;
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
 
 	tmp1 = (unsigned char *)dst;
 	tmp2 = (unsigned char *)src;
-
 	if ((dst < (src + len)) && (src < dst))
 	{
 		while (len)
@@ -29,6 +28,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	else
-		dst = ft_memcpy(dst, src,len);
+		dst = ft_memcpy(dst, src, len);
 	return (dst);
 }
