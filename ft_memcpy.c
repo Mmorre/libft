@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 09:58:54 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 11:31:15 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 12:52:22 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*tmp1;
-	unsigned char	*tmp2;
+	size_t		i;
+	char		*ptr_dst;
+	const char	*ptr_src;
 
-	tmp1 = (unsigned char *)dst;
-	tmp2 = (unsigned char *)src;
-	while (n)
+	i = 0;
+	ptr_dst = (char *)dst;
+	ptr_src = (const char *)src;
+	if ((src == NULL) && (dst == NULL))
+		return (NULL);
+	while (i < n)
 	{
-		*tmp1 = *tmp2;
-		tmp1++;
-		tmp2++;
-		n--;
+		ptr_dst[i] = ptr_src[i];
+		i++;
 	}
 	return (dst);
 }

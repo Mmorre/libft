@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 17:42:35 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 11:46:32 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 12:40:28 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if ((int)start >= fin)
 		fin = 0;
 	else
-		fin - fin - start + 1;
+		fin = fin - start + 1;
 	new = ft_substr(s1, start, fin);
 	return (new);
 }

@@ -6,29 +6,31 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 11:00:46 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 11:29:19 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 12:39:35 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	*tmp1;
-	unsigned char	*tmp2;
-	unsigned char	convert_c;
+	unsigned char			us_c;
+	size_t					i;
+	unsigned char			*ptr_dst;
+	unsigned char			*ptr_src;
 
-	tmp1 = (unsigned char)dest;
-	tmp2 = (unsigned char)src;
-	convert_c = (unsigned char)c;
-	while (n)
+	us_c = (unsigned char)c;
+	ptr_dst = (unsigned char *)dst;
+	ptr_src = (unsigned char *)src;
+	i = 0;
+	if ((src == NULL) && (dst == NULL))
+		return (NULL);
+	while (i < n)
 	{
-		*tmp1 = *tmp2;
-		tmp1++;
-		n--;
-		if (*tmp2 == convert_c)
-			return (tmp1);
-		tmp2++;
+		ptr_dst[i] = ptr_src[i];
+		i++;
+		if (ptr_src[i - 1] == us_c)
+			return ((void *)&ptr_dst[i]);
 	}
-	retun (NULL);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:47:39 by mmorre            #+#    #+#             */
-/*   Updated: 2021/04/14 11:42:02 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 12:41:21 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
-	size_t	count_dst;
-	size_t	count_src;
+	size_t	i;
+	size_t	j;
+	size_t	size;
 
-	i = 0;
-	count_dst = ft_strlen(dst);
-	count_src = ft_strlen(src);
-	while ((i < dstsize - count_dst - 1) && (dstsize > count_dst) && src[i])
+	if (ft_strlen(dst) < dstsize)
+		size = ft_strlen(src) + ft_strlen(dst);
+	else
+		size = dstsize + ft_strlen(src);
+	j = 0;
+	while (dst[j] && dstsize)
 	{
-		dst[count_dst + i] = src[i];
+		j++;
+		dstsize--;
+	}
+	i = 0;
+	while (src[i] && i < dstsize - 1 && dstsize)
+	{
+		dst[j + i] = src[i];
 		i++;
 	}
-	dst[count_dst + i] = '\0';
-	if (dstsize <= count_dst)
-		count_dst = dstsize;
-	return (count_dst + count_src);
+	if (dstsize)
+		dst[j + i] = '\0';
+	return (size);
 }
