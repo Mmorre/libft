@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 11:41:43 by mmorre            #+#    #+#             */
-/*   Updated: 2021/04/14 10:12:40 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 11:30:49 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*tmp1;
 	unsigned char	*tmp2;
 
-	tmp1 = (unsigned char *) s1;
-	tmp2 = (unsigned char *) s2;
+	tmp1 = (unsigned char *)s1;
+	tmp2 = (unsigned char *)s2;
 	while (n)
 	{
 		if (*tmp1 != *tmp2)

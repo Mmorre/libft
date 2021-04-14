@@ -6,13 +6,13 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 10:30:01 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 10:06:14 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 11:20:01 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isprint(int c)
+int	ft_isprint(int c)
 {
 	return (32 <= c && c <= 127);
 }
