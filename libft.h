@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 08:25:54 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 11:49:04 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 12:12:35 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
-void	*ft_strdup(const char *s);
+char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);

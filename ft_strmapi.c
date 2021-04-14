@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 17:32:11 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 12:03:43 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 12:13:01 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if ((!s) || (!f))
 		return (NULL);
 	s_len = (unsigned int)ft_strlen(s);
-	str = malloc(sizeof(char) * (s_len + 1)));
+	str = malloc(sizeof(char) * (s_len + 1));
 	if (!str)
 		return (NULL);
 	while (i < s_len)
