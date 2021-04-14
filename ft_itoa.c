@@ -6,7 +6,7 @@
 /*   By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 15:54:20 by math              #+#    #+#             */
-/*   Updated: 2021/04/14 11:56:06 by mmorre           ###   ########.fr       */
+/*   Updated: 2021/04/14 14:20:51 by mmorre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ char	*ft_itoa(int n)
 	unsigned int	pos;
 
 	len_int = 0;
-	signe = -1;
+	signe = 0;
 	if (n < 0)
 	{
 		signe = -1;
-		pos = (unsigned int) - n;
+		pos = (unsigned int)(-n);
 		len_int++;
 	}
 	else

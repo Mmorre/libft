@@ -6,7 +6,7 @@
 #    By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/06 14:54:25 by math              #+#    #+#              #
-#    Updated: 2021/04/14 12:23:32 by mmorre           ###   ########.fr        #
+#    Updated: 2021/04/14 14:42:17 by mmorre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,8 +74,9 @@ $(NAME):
 	ranlib $(NAME)
 			
 		
-bonus: $(OBJS) $(OBJSBONUS)
-	ar rc $(NAME) $(OBJS) $(OBJSBONUS)
+bonus: $(NAME)
+	$(CC) $(FLAGS) $(BONUS)
+	ar rc $(NAME) $(OBJSBONUS)
 	ranlib $(NAME)
 				
 
@@ -94,4 +95,4 @@ fclean: clean
 re: fclean all
 
 
-.PHONY:		all bonus clean fclean re
+.PHONY:		all clean fclean re bonus
