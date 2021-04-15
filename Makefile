@@ -6,7 +6,7 @@
 #    By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/06 14:54:25 by math              #+#    #+#              #
-#    Updated: 2021/04/14 14:42:17 by mmorre           ###   ########.fr        #
+#    Updated: 2021/04/15 14:33:44 by mmorre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME	= libft.a
 CC		= gcc
 
 FLAGS	= -Wall -Wextra -Werror -c
+
+NORM	= norminette *.*
 
 SRCS	= ft_strlen.c \
 			ft_isalpha.c \
@@ -68,31 +70,28 @@ OBJSBONUS = $(BONUS:.c=.o)
 all: $(NAME)
 
 
-$(NAME):	
-	$(CC) $(FLAGS) $(SRCS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+$(NAME):
+	@$(NORM)	
+	@$(CC) $(FLAGS) $(SRCS)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
 			
 		
 bonus: $(NAME)
-	$(CC) $(FLAGS) $(BONUS)
-	ar rc $(NAME) $(OBJSBONUS)
-	ranlib $(NAME)
+	@$(CC) $(FLAGS) $(BONUS)
+	@ar rc $(NAME) $(OBJSBONUS)
+	@ranlib $(NAME)
 				
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
-
-
 clean:
-	rm -f $(OBJS) $(OBJSBONUS)
+	@rm -f $(OBJS) $(OBJSBONUS)
 				
 
 fclean: clean
-	rm -f $(NAME) $(SO)
+	@rm -f $(NAME)
 				
 				
 re: fclean all
 
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re bonus 
