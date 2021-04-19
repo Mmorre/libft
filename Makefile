@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmorre <mmorre@student.42.fr>              +#+  +:+       +#+         #
+#    By: math <math@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/06 14:54:25 by math              #+#    #+#              #
-#    Updated: 2021/04/15 14:33:44 by mmorre           ###   ########.fr        #
+#    Updated: 2021/04/19 17:55:41 by math             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,6 @@ NAME	= libft.a
 CC		= gcc
 
 FLAGS	= -Wall -Wextra -Werror -c
-
-NORM	= norminette *.*
 
 SRCS	= ft_strlen.c \
 			ft_isalpha.c \
@@ -70,8 +68,7 @@ OBJSBONUS = $(BONUS:.c=.o)
 all: $(NAME)
 
 
-$(NAME):
-	@$(NORM)	
+$(NAME):	
 	@$(CC) $(FLAGS) $(SRCS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
